@@ -74,7 +74,8 @@ class RecaptchaSolver:
                 raise Exception("Failed to solve the captcha")
 
         except Exception as e:
-            raise Exception(f"Audio challenge failed: {str(e)}")
+            pass
+            # raise Exception(f"Audio challenge failed: {str(e)}")
 
     def _process_audio_challenge(self, audio_url: str) -> str:
         """Process the audio challenge and return the recognized text.
